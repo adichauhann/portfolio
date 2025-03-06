@@ -1,0 +1,112 @@
+/* Technical Background Image */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://www.transparenttextures.com/patterns/circuit-board.png'), linear-gradient(135deg, #001f3f, #007bff);
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    position: relative;
+}
+
+/* Section Design */
+.section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 20px 0;
+    position: relative;
+    animation: slideUp 1s ease-out, glowingBorder 3s infinite alternate;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+/* Hover Effect */
+.section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.6);
+}
+
+/* Section Heading */
+.section h2 {
+    font-size: 24px;
+    color: #00ffcc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+/* List Style */
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+/* Icons */
+.section h2 i, .section li i, .section p i {
+    color: #ffcc00;
+    font-size: 18px;
+}
+
+/* Keyframe Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowingBorder {
+    from {
+        box-shadow: 0 0 15px #00ffcc;
+    }
+    to {
+        box-shadow: 0 0 30px #ffcc00;
+    }
+}
+
+/* Contact Icons */
+.section p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Media Query (Responsive) */
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+    }
+    .container {
+        width: 95%;
+        margin-top: 20px;
+    }
+}
